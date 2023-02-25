@@ -69,9 +69,7 @@ const Navbarvc = () => {
           </Link>
           &nbsp;&nbsp;
           <div className="logout">
-            <button className="gpt3__header-content__logout" onClick={logout}>
-              Logout
-            </button>
+            
           </div>
         </div>
       ) : (

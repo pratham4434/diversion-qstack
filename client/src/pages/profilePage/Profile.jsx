@@ -83,9 +83,15 @@ const Profile = () => {
           <button className="profile_cp-btn">Complete Profile</button>
         </Link>
         &nbsp;&nbsp;
-        <Link to="/submitquestion">
+        {
+          (mydata.role==="student")?
+            <Link to="/submitquestion">
           <button className="profile_cta-btn">ASK DOUBT</button>
-        </Link>
+        </Link>:
+        <button className="profile_cta-btn">Doubts</button>
+        
+        }
+
         &nbsp;&nbsp;
         <h1 style={{ fontSize: "large", textWrap: "break-word" }}>
           200+ <small>Doubts Solved</small>

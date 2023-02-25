@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./signup.css";
 import { Link } from "react-router-dom";
 
@@ -9,11 +9,18 @@ import { useHistory } from "react-router";
 
 const Signup = () => {
 
-  const username = useRef();
-  const email = useRef();
-  const password = useRef();
+  const username = useRef("");
+  const email = useRef("");
+  const password = useRef("");
+  const [role,setRole]=useState("student");
   const history = useHistory();
 
+  const handleChange2 = (e) => {
+    // Destructuring
+    const { value, checked } = e.target;
+    console.log(`${value} is ${checked}`);
+    setRole(e.target.value);
+  }
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -21,6 +28,7 @@ const Signup = () => {
         username: username.current.value,
         email: email.current.value,
         password: password.current.value,
+        role:role,
       };
       try {
         await axios.post("/auth/register", user);
@@ -53,14 +61,14 @@ const Signup = () => {
                 <span className="checkmark2">
                   <h2>
                     Student{" "}
-                    <input type="radio" name="check"  />
+                    <input type="radio" name="check" value="student" onChange={handleChange2}  />
                   </h2>
                 </span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 
                 <span className="checkmark2">
                   <h2>
-                    Tutor <input type="radio" name="check" />
+                    Tutor <input type="radio" name="check" value="tutor" onChange={handleChange2} />
                   </h2>
                   
                 </span>
