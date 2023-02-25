@@ -4,19 +4,18 @@ import { AuthContext } from "../../context/AuthContext";
 import { postDoubt } from "../../requests/defaultcall";
 
 const Input = () => {
-  
   const [loading, setLoading] = useState(false);
-   const [image, setImage] = useState("");
-   const [desc, setDesc] = useState("");
-   const [title, setTitle] = useState("");
-   
-   const [puser,setPuser]=useState({});
-   
-   const { user } = useContext(AuthContext);
+  const [image, setImage] = useState("");
+  const [desc, setDesc] = useState("");
+  const [title, setTitle] = useState("");
 
-  console.log("here we are")
-  console.log(user)
-  
+  const [puser, setPuser] = useState({});
+
+  const { user } = useContext(AuthContext);
+
+  console.log("here we are");
+  console.log(user);
+
   const uploadImage = async (e) => {
     const files = e.target.files;
     console.log("some error occured");
@@ -30,45 +29,40 @@ const Input = () => {
       "https://api.cloudinary.com/v1_1/dkzpbucfz/image/upload",
       {
         method: "POST",
-       body: data,
-     }
+        body: data,
+      }
     );
 
     const file = await res.json();
     setImage(file.secure_url);
     console.log("we are here now ");
     console.log(file.secure_url);
-    
-  
-    setLoading(false);
-   }
 
-  
-   const handleSubmit = async (e) => {
-     e.preventDefault();
-    
-    try{
-      console.log("entered in handlesubmit")
-      console.log("id==> ",user._id)
-      
-      const info =await postDoubt({
-        title:title,
-        desc:desc,
-        image:image,
-        username:user.username,
-  
-      })
-      if(info){
-        console.log("everything is fine");
-      }else{
-        console.log("error occureed");
-      }
-    }catch(err){
-      console.log("error occured in doubt page");
-    }
-    
+    setLoading(false);
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      console.log("entered in handlesubmit");
+      console.log("id==> ", user._id);
+
+      const info = await postDoubt({
+        title: title,
+        desc: desc,
+        image: image,
+        username: user.username,
+      });
+      if (info) {
+        console.log("everything is fine");
+      } else {
+        console.log("error occureed");
+      }
+    } catch (err) {
+      console.log("error occured in doubt page");
+    }
+  };
 
   return (
     <>
@@ -80,11 +74,8 @@ const Input = () => {
             <input
               className="section-2-1_inp"
               placeholder="Enter your question title here"
-              onChange={e=>setDesc(e.target.value)}
+              onChange={(e) => setDesc(e.target.value)}
               value={desc}
-              
-              
-              
             />
           </div>
           <div className="section-2">
@@ -94,7 +85,6 @@ const Input = () => {
                 type="file"
                 id="file3"
                 onChange={uploadImage}
-               
               />
               <label For="file3">
                 <i className="fa-regular fa-image"></i>
@@ -114,13 +104,14 @@ const Input = () => {
               </select>
             </div>
 
-            <h2 className="sect-desc">Enter the subject and title of your doubt:</h2>
+            <h2 className="sect-desc">
+              Enter the subject and title of your doubt:
+            </h2>
             <input
               className="section-2-1_inp title-ques"
               placeholder="Enter your question title here"
-              onChange={e=>setTitle(e.target.value)}
+              onChange={(e) => setTitle(e.target.value)}
               value={title}
-             
             />
             <button
               className=" submit gpt3__header-content__input-ask"
@@ -130,8 +121,7 @@ const Input = () => {
             </button>
           </div>
         </div>
-     
-</form>
+      </form>
       <div className="free-space2"></div>
     </>
   );

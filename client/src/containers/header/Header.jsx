@@ -4,7 +4,6 @@ import ai from "../../assets/a12.svg";
 import "./header.css";
 import { Link } from "react-router-dom";
 
-
 const Header = () => (
   <div className="gpt3__header section__padding" id="home">
     <div className="gpt3__header-content">
@@ -18,14 +17,12 @@ const Header = () => (
       </p>
 
       <div className="gpt3__header-content__input">
-      <Link to="/submitquestion">
-      <button className="gpt3__header-content__input-ask" type="button">
+        <button className="gpt3__header-content__input-ask" type="button">
           ASK NOW
         </button>
-        </Link>
-        
+
         <button className="gpt3__header-content__input-play" type="button">
-          ▶
+          <a href="#wgpt3">▶</a>
         </button>
         <div className="gpt3__header-content__input-text">
           <p>See how it works!</p>

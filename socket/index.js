@@ -9,9 +9,7 @@ const io=require("socket.io")(server,{
     }
 })
 io.on("connection",(socket)=>{
-    socket.emit("cnnected",()=>{
-         console.log("you are connected now");
-    })
+    socket.emit("connected");
 
     socket.on("calluser",(data)=>{
         io.to(data.usertocall).emit("calluser",{
@@ -20,14 +18,13 @@ io.on("connection",(socket)=>{
             name:data.name
         })
     })
-    
-
-
-
-
 
 
     socket.on("disconnect",()=>{
         console.log("socket is disconnected");
     })
+})
+
+server.listen(5000,()=>{
+    console.log("server is listening at port 5000")
 })
