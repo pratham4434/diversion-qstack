@@ -15,11 +15,12 @@ const Header = () => (
         thoughts all exercise blessing. Indulgence way everything joy alteration
         boisterous the attachment. Party we years to order allow asked of.
       </p>
-
       <div className="gpt3__header-content__input">
-        <button className="gpt3__header-content__input-ask" type="button">
-          ASK NOW
-        </button>
+        <Link to="/submitquestion">
+          <button className="gpt3__header-content__input-ask" type="button">
+            ASK NOW
+          </button>
+        </Link>
 
         <button className="gpt3__header-content__input-play" type="button">
           <a href="#wgpt3">▶</a>
