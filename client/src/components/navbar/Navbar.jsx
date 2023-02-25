@@ -15,15 +15,17 @@ const Menu = () => {
       <p>
         <a href="#wgpt3">What is QStack?</a>
       </p>
-      <p>
-        <a href="#possibility">Ask a Question</a>
-      </p>
+      
       <p>
         <a href="#features">Case Studies</a>
       </p>
       <p>
-        <a href="#blog">Library</a>
+        <a href="#blog">Blog</a>
       </p>
+      <p>
+        <a href="#possibility">Submit a Review</a>
+      </p>
+      
     </>
   );
 };

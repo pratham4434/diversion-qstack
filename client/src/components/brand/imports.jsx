@@ -1,13 +1,13 @@
-import google from '../../assets/google.png';
-import slack from '../../assets/slack.png';
-import atlassian from '../../assets/atlassian.png';
-import dropbox from '../../assets/dropbox.png';
-import shopify from '../../assets/shopify.png';
+import typescript from '../../assets/typescript.png';
+import react from '../../assets/react.png';
+import nodejs from '../../assets/nodejs.png';
+import express from '../../assets/express.png';
+import mongodb from '../../assets/mongodb.png';
 
 export {
-  google,
-  slack,
-  atlassian,
-  dropbox,
-  shopify,
+  typescript,
+  react,
+  nodejs,
+  express,
+  mongodb,
 };
