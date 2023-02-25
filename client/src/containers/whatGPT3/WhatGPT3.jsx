@@ -11,7 +11,7 @@ const WhatGPT3 = () => (
         your doubt. So here we have our application QStack, which is a web app that will provide 
         the students a chance to get a video chat explanation  from a tutor for every doubt they have. All that
         the student has to do is to click a picture of his/her doubt and upload it on our website 
-        along with his/her query. He/she will get a reply by our fellow teachers in 90 seconds. "
+        along with his/her query. He/she will get a reply by our fellow teachers in 90 seconds."
       />
     </div>
     <div className="gpt3__whatgpt3-heading">

@@ -30,9 +30,16 @@ const Header = () => (
           </Link>
 
           <button className="gpt3__header-content__input-play" type="button">
-          {/* drive link */}
-            <a style={{display:"flex",justifyContent:"center",  filter: "brightness(90%)"}} href="#">
-            📃
+            {/* drive link */}
+            <a
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                filter: "brightness(90%)",
+              }}
+              href="https://drive.google.com/file/d/1Gfcynb6gYaHVWw_Y1iRFpFyrZna84u7_/view?usp=sharing"
+            >
+              📃
             </a>
           </button>
           <div className="gpt3__header-content__input-text">

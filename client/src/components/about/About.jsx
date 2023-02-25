@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
-      <div style={{ marginTop: "0",paddingTop: "0"}}className="gpt3__cta2" id="#about">
+      <div style={{ marginTop: "0",paddingTop: "0"}}className="gpt3__cta2" id="about">
         <div
           className="gpt3__cta-content"
           style={{
