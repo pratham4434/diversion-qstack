@@ -19,6 +19,10 @@ io.on("connection",(socket)=>{
         })
     })
 
+    socket.on("answercall", (data) => {
+		io.to(data.to).emit("callaccepted", data.signal)
+	})
+
 
     socket.on("disconnect",()=>{
         console.log("socket is disconnected");

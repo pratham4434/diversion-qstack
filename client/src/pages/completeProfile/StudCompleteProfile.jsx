@@ -7,6 +7,8 @@ import "./completeprofile.css";
 import { updateUser } from "../../requests/defaultcall";
 const StudCompleteProfile = () => {
   const { user } = useContext(AuthContext);
+  console.log("user info my man");
+  console.log(user);
   const [state, setState] = useState({
     name: "",
     bio: "",
@@ -237,7 +239,9 @@ const StudCompleteProfile = () => {
                 }}
                 className="left-label"
               >
-                Topics Interested in:
+                {
+                  (user.role==="tutor")?"Expertise In :":"Interested In Topics :"
+                }
               </label>
               <div className="left-label-div2">
                 <input

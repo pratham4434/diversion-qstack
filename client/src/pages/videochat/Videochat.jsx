@@ -8,7 +8,7 @@ import Peer from "simple-peer";
 const socket=io.connect("http://localhost:5000");
 const Videochat = () => {
   const [stream,setStream]=useState("");
-  const [me,seMe]=useState("");
+  const [myid,setMyid]=useState("");
   const [caller,setCaller]=useState("");
   const [name,setName]=useState("");
   const [idtocall,setIdtocall]=useState("");
@@ -29,7 +29,7 @@ const Videochat = () => {
      }) 
 
      socket.on("me",(id)=>{
-      setId(id);
+      setMyid(id);
      })
 
      socket.on("calluser",(data)=>{
@@ -51,7 +51,7 @@ const Videochat = () => {
       socket.emit("calluser",{
         usertocall:id,
         signalData:data,
-        from:me,
+        from:myid,
         name:name
       })
     })
@@ -128,7 +128,9 @@ const Videochat = () => {
         </div>
         <div className="wrapper-chat">
           <div className="chat">
-            <div className="student">displayS</div>
+            <div className="student">
+            {stream &&  <video playsInline muted ref={myvideo} autoPlay style={{ width: "300px" }} />}
+            </div>
             <div className="text">
               <i className="icons fas fa-user"></i>
               <input
