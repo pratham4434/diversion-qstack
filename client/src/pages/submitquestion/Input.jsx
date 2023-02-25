@@ -1,9 +1,11 @@
 import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import imagepc from "../../assets/Dictionary-pana.svg";
 import { AuthContext } from "../../context/AuthContext";
 import { postDoubt } from "../../requests/defaultcall";
 
 const Input = () => {
+  const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [image, setImage] = useState("");
   const [desc, setDesc] = useState("");
@@ -56,8 +58,10 @@ const Input = () => {
       });
       if (info) {
         console.log("everything is fine");
+        history.push("/videochat")
       } else {
         console.log("error occureed");
+        history.push("/error")
       }
     } catch (err) {
       console.log("error occured in doubt page");

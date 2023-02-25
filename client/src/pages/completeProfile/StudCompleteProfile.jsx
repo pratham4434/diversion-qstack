@@ -2,10 +2,12 @@ import React from "react";
 import Navbarvc from "../../components/navbar-other/Navbarvc";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { useHistory } from "react-router-dom";
 
 import "./completeprofile.css";
 import { updateUser } from "../../requests/defaultcall";
 const StudCompleteProfile = () => {
+  const history=useHistory();
   const { user } = useContext(AuthContext);
   console.log("user info my man");
   console.log(user);
@@ -54,14 +56,14 @@ const StudCompleteProfile = () => {
     console.log("something changed ");
     console.log(userinfo);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     console.log("submitted data");
     console.log(state);
     console.log(userinfo);
     const userid = user._id;
 
-    updateUser(userid, {
+    const res=await updateUser(userid, {
       name: state.name,
       _id: user._id,
       collage: state.collage,
@@ -73,6 +75,7 @@ const StudCompleteProfile = () => {
       bio: state.bio,
       password: user.password,
     });
+    history.push("/profile");
   };
 
   const [loading, setLoading] = useState(false);
@@ -340,6 +343,7 @@ const StudCompleteProfile = () => {
                   ExpressJS
                 </label>
               </div>
+
               <div className="button-cp">
                 <button type="submit">Submit</button>
               </div>

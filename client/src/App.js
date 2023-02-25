@@ -50,7 +50,7 @@ const App = () => {
           <SingleDoubt />
         </Route>
         <Route exact path="/completeprofile">
-          {0 ? <TutCompleteProfile /> : <StudCompleteProfile />}
+          <StudCompleteProfile />
         </Route>
       </Switch>
     </Router>

@@ -88,7 +88,10 @@ const Profile = () => {
             <Link to="/submitquestion">
           <button className="profile_cta-btn">ASK DOUBT</button>
         </Link>:
+        <Link to="/doubtpage">
         <button className="profile_cta-btn">Doubts</button>
+
+        </Link>
         
         }
 

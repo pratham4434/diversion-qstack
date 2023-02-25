@@ -56,8 +56,10 @@ export const refreshToken = async () => {
     try{
       const res=await axios.put("http://localhost:8000/api/users/"+userid,data);
       console.log("updated successfully");
+      return res;
     }catch(err){
        console.log("some error occured while updating user account ",err);
+       return err;
     }
   }
   //get user
