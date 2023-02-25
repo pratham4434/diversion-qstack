@@ -1,0 +1,76 @@
+.card-doubt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* position: absolute; */
+  width: 500px;
+  height: 600px;
+  /* left: 75px;
+    top: 347px; */
+
+  /* background: #dfdfdf; */
+  border-radius: 20px;
+  /* border: 1px solid #ff0000; */
+  margin-bottom: 4rem;
+  border: 2px solid #a0a0a0;
+  background: rgba(0, 144, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  /* From https://css.glass */
+  background: rgba(0, 144, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+}
+.card-doubt:hover {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 20px #9ecaed;
+}
+.card-desc-wrapper {
+  color: #fafafa;
+  display: flex;
+  /* border-color: #9ecaed; */
+  width: 92%;
+  flex-direction: column;
+  /* margin:  20rem; */
+  /* margin-right:20%; */
+
+}
+.card-img {
+  /* position: absolute; */
+  width: 92%;
+  height: 50%;
+  /* left: 104.44px;
+  top: 395px; */
+  margin: 5%;
+
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.card-desc {
+  /* position: absolute; */
+  width: 92%;
+  word-wrap: break-word;
+
+  height: inherit;
+  left: 5%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 39px;
+  margin: 5%;
+  line-height: 1.5;
+  margin-top: 0;
+  color: #000000;
+}
+.doubt-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,244 @@
+.cover_rectangle3 {
+  position: absolute;
+  width: 95%;
+  height: 80vh;
+  left: 2%;
+  right: 2%;
+  top: 13%;
+  display: flex;
+  background: #042c54;
+  border-radius: 20px;
+  flex-direction: row;
+  background: var(--color-footer);
+  border: 0px solid;
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgb(33, 44, 61) 25%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgb(21, 31, 53) 25%
+  );
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tut-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* align-items: flex-start; */
+  border-right: 3px solid #a6a6a6;
+  padding: 1%;
+  /* padding-left: 0; */
+  margin: 5%;
+  margin-right: -1rem;
+  padding-right: 5%;
+}
+.tut-left form {
+  text-align: left;
+  padding-left: 1px;
+  justify-content: left;
+}
+.tut-left label {
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+  justify-content: left;
+}
+.tut-left input {
+  margin-top: 12px;
+
+  text-align: left;
+  padding-left: 1em;
+  /* margin-left: 0; */
+  justify-content: left;
+  font-size: large;
+}
+.tut-right input {
+  margin-top: 12px;
+
+  text-align: left;
+  padding-left: 1em;
+  /* margin-left: 0; */
+  justify-content: left;
+  font-size: large;
+}
+.heading-text {
+  /* display: flex; */
+  width: 100%;
+  justify-content: center;
+}
+
+.tut-right label {
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+  /* color: #0077ff; */
+  justify-content: left;
+  word-wrap: break-word;
+}
+
+.tut-right {
+  padding: 1%;
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* align-items: flex-end; */
+}
+
+.left-label {
+  text-align: left;
+  font-weight: bold;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.left-label-div {
+  display: flex;
+  width: 100%;
+  height: 1rem;
+  justify-content: left;
+  
+}
+.left-label-div2 {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  justify-content: left;
+}
+.left-input {
+  width: 100%;
+  height: 3.5rem;
+  text-align: left;
+  background-color: #031b34;
+  color: #fff;
+  font-size: small;
+  padding: 0.5rem 1.5rem;
+
+  margin: 8px;
+  margin-bottom: 1.5rem;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.select-input-cp {
+  width: 100%;
+  color: #6b6b6b;
+  background-color: #042c54;
+  border: none;
+  border-radius: 12px;
+  margin: 0.5rem;
+  margin-left: 0;
+  height: 3.5rem;
+  font-size: large;
+  justify-content: center;
+  /* text-align: center; */
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+small {
+  color: #a2a2a2;
+}
+
+.upload-img {
+  display: flex;
+  width: 100%;
+}
+
+.upload-img input {
+  display: none;
+}
+
+.upload-img-spec {
+  height: 5rem;
+  width: 79%;
+  text-align: center;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-color: #031b34;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: larger;
+  font-weight: bold;
+}
+.upload-img-spec2 {
+  width: 19%;
+  height: 103%;
+  /* width: 100%; */
+  text-align: center;
+  display: flex;
+  margin-left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #031b34;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.button-cp {
+  /* padding: 1rem 3rem; */
+  /* margin-top: 3rem; */
+  /* margin-left: 70%; */
+  display: flex;
+  justify-content: right;
+  border: 0px;
+}
+.button-cp button:hover {
+  background-color: #eb2222;
+}
+.button-cp button {
+  font-size: larger;
+  font-weight: bolder;
+  width: 11rem;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  justify-content: right;
+  border-radius: 16px;
+  color: #fff;
+  background-color: #fe2f00;
+  border: 0px;
+  cursor: pointer;
+}

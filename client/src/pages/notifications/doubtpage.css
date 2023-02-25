@@ -1,0 +1,113 @@
+.doubt_title h1 {
+  /* position: absolute; */
+  width: 218px;
+  height: 90px;
+  left: 75px;
+  top: 144px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 90px;
+  /* identical to box height */
+
+  color: #424242;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  /* margin-top: 8rem; */
+  margin-left: 5%;
+  margin-right: 5%;
+
+  width: 90%;
+  /* background-color: aquamarine; */
+}
+.session {
+  /* border: 3px solid #00ff7b; */
+  /* padding: 50px; */
+  display: flex;
+  width: 86%;
+  margin: 2%;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  margin-top: -20%;
+  /* display: flex;
+  width: 90vw; */
+  /* flex-direction: column; */
+  /* position: absolute; */
+  /* top: 42rem;
+  left: 5rem; */
+}
+
+.title-section {
+  display: flex;
+  align-items: flex-start;
+
+  /* background-color: pink; */
+}
+.line2 {
+  width: 80px;
+  /* position: absolute; */
+  height: 0px;
+  /* top: 11.5rem; */
+  margin-left: 5%;
+  border: 2px solid #042c54;
+}
+
+.input-section {
+  /* margin-right: -5%; */
+  display: flex;
+  margin-left: 35%;
+  flex: 5;
+  align-items: flex-end;
+  /* background-color: yellow; */
+}
+
+@media screen and (max-width: 800px) {
+  .input-section {
+    visibility: hidden;
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 20%;
+}
+.input-spec {
+  margin-left: auto;
+  margin-right: 5%;
+  width: 75%;
+  height: 55px;
+  background-color: var(--bg-input);
+  border: 0px solid;
+  border-radius: 55px;
+  /* display: grid; */
+  grid-template-columns: 15% 70% 15%;
+  padding: 0 1rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: large;
+  
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* justify-content: center; */
+  gap: 4%;
+  /* position: absolute;
+    top: 15rem;
+    left: 6rem; */
+
+}
