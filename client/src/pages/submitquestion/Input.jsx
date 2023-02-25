@@ -58,10 +58,10 @@ const Input = () => {
       });
       if (info) {
         console.log("everything is fine");
-        history.push("/videochat")
+        history.push("/videochat");
       } else {
         console.log("error occureed");
-        history.push("/error")
+        history.push("/error");
       }
     } catch (err) {
       console.log("error occured in doubt page");
@@ -71,13 +71,15 @@ const Input = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
+      <div className="free-space2"></div>
+
         <div className="cover_rectangle2">
           <div className="section-1">
             <h1>Submit Your Question:</h1>
 
             <input
               className="section-2-1_inp"
-              placeholder="Enter your question title here"
+              placeholder="Enter your question description here"
               onChange={(e) => setDesc(e.target.value)}
               value={desc}
             />
@@ -98,25 +100,30 @@ const Input = () => {
             <div className="section-2-1">
               <img src={imagepc} className="pcimage" />
             </div>
-
+{/* <div className="flex-col"> */}
             <div className="section-2-2_drop input-btn">
               <select className="select-input" name="cars" id="cars">
                 <option value="Others">Others</option>
                 <option value="JavaScript">JavaScript</option>
-                <option value="C++">C++</option>
-                <option value="Python">Python</option>
+                <option value="ReactJs">ReactJs</option>
+                <option value="NodeJs">NodeJs</option>
+                <option value="MongoDB">MongoDB</option>
+
               </select>
             </div>
-
-            <h2 className="sect-desc">
-              Enter the subject and title of your doubt:
-            </h2>
-            <input
-              className="section-2-1_inp title-ques"
-              placeholder="Enter your question title here"
-              onChange={(e) => setTitle(e.target.value)}
-              value={title}
-            />
+            <div>
+              <h2 className="sect-desc">
+                Enter the subject and title of your doubt:
+                <input
+                className="section-2-1_inp title-ques"
+                placeholder="Enter your question title here"
+                onChange={(e) => setTitle(e.target.value)}
+                value={title}
+              />
+              </h2>
+             
+            {/* </div> */}
+            </div>
             <button
               className=" submit gpt3__header-content__input-ask"
               type="submit"
@@ -125,8 +132,9 @@ const Input = () => {
             </button>
           </div>
         </div>
+      
+
       </form>
-      <div className="free-space2"></div>
     </>
   );
 };

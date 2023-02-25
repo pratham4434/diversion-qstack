@@ -15,6 +15,19 @@
   color: #424242;
 }
 
+.wrapper2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  /* margin-top: 8rem; */
+  margin-left: 5%;
+  margin-right: 5%;
+
+  width: 90%;
+  /* background-color: aquamarine; */
+}
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -50,6 +63,7 @@
 .title-section {
   display: flex;
   align-items: flex-start;
+  margin-top: 0;
 
   /* background-color: pink; */
 }

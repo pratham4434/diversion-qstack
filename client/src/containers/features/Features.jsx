@@ -4,19 +4,19 @@ import "./features.css";
 
 const featuresData = [
   {
-    title: "Signup and then login",
+    title: "S1: Signup and then login",
     text: "You would have to first Sign up to our server and then log in to use our features",
   },
   {
-    title: "Complete your profile",
+    title: "S2: Complete your profile",
     text: "A completed profile with your name and the topics that you're interested in would allow you to experience all the benefits of our application",
   },
   {
-    title: "Submit A Doubt",
-    text: "Take a picture of your doubt and submit it with detailed explanation, from the Ask a Doubt button in the profile page. ",
+    title: "S3: Submit A Doubt",
+    text: "Take a picture of your doubt and submit it with detailed explanation, from the Ask a Doubt button. ",
   },
   {
-    title: "Video Chat Initiation",
+    title: "S4: Video Chat Initiation",
     text: "Wait for 90 seconds, a tutor experienced in your tech stack would be joining you to rectify you doubt",
   },
 ];

@@ -16,25 +16,24 @@ const WhatGPT3 = () => (
     </div>
     <div className="gpt3__whatgpt3-heading">
       <h1 className="gradient__text">
-        One app to solve all your doubts Faster and Coherently.
+        One app to solve all your doubts Fastly and Coherently.
       </h1>
       <a href="#features">
-      <p>See detailed steps</p>
-
+        <p>See detailed steps</p>
       </a>
     </div>
     <div className="gpt3__whatgpt3-container">
       <Feature
-        title="Chatbots"
-        text="We so opinion friends me message as delight. Whole front do of plate heard oh ought."
+        title="ChatGPT API"
+        text="We have integrated the optimised chatGPT's support for pure students' work which can directly answer your doubts if any tutor is not available. (current unavailable)"
       />
       <Feature
-        title="Knowledgebase"
-        text="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
+        title="Blogs Suggestion"
+        text="We'll be suggesting you top viewed blogs for the tags of the topics/stacks that you selected while creating your profile"
       />
       <Feature
-        title="Education"
-        text="At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. As put impossible own apartments b"
+        title="Screenshare Feature"
+        text="If you want to show your code to the tutor and type while he rectifies and dictates, then for that we have our screenshare feature which you can use while on VC."
       />
     </div>
   </div>

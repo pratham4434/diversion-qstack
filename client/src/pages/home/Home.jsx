@@ -23,11 +23,13 @@ function Home() {
         <WhatGPT3 />
         <Features />
         <CTA />
-        <Possibility />
-        <About />
 
         <Blog />
+        <About />
+
       </div>
+      <Possibility />
+
       <Footer />
     </div>
   );

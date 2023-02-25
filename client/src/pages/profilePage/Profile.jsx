@@ -72,7 +72,6 @@ const Profile = () => {
         </div>
         <div className="profile_stack-wrapper">
          { 
-          
           stack && stack.map((data)=><Stack
            data={data}
          />)}

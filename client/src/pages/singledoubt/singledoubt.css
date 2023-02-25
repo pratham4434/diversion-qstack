@@ -1,6 +1,6 @@
 .cover_rectangle4 {
   /* position: absolute; */
-  max-width: 95%;
+  max-width: 96%;
   height: 89vh;
   margin-left: 2%;
   margin-right: 2%;
@@ -44,8 +44,10 @@
   border-radius: 20px;
 }
 .free-space2 {
-  height: 20px;
+  
+  height: 90px;
   width: 100wv;
+  /* background-color: #fdfdfd; */
   /* background-color: #2677c8; */
 }
 .left-pic{

@@ -118,6 +118,7 @@ const StudCompleteProfile = () => {
         />
         <Navbarvc />
         <form onSubmit={handleSubmit}>
+        <div className="free-space"></div>
           <div className="cover_rectangle2">
             <div className="tut-left">
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;

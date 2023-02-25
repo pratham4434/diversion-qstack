@@ -15,7 +15,7 @@ const Menu = () => {
       <p>
         <a href="#wgpt3">What is QStack?</a>
       </p>
-      
+
       <p>
         <a href="#features">Case Studies</a>
       </p>
@@ -25,7 +25,6 @@ const Menu = () => {
       <p>
         <a href="#possibility">Submit a Review</a>
       </p>
-      
     </>
   );
 };
@@ -106,7 +105,9 @@ const Navbar = () => {
             <div className="gpt3__navbar-menu_container-links">
               <Menu />
               <div className="gpt3__navbar-menu_container-links-sign">
-                <button type="button"> Sign up</button>
+                <Link to="/signup">
+                  <button type="button"> Sign up</button>
+                </Link>
               </div>
             </div>
           </div>

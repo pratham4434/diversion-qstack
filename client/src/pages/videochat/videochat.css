@@ -6,14 +6,65 @@
 
 .wrapper {
   display: flex;
+  flex: 3 1 auto;
   flex-direction: row;
+  padding: 0.5rem;
+  border-radius: 12px;
+  /* min-width: 60%; */
+  height: 820px;
+  /* background-color: #fff; */
+  border: 0px solid;
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgb(33, 44, 61) 25%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgb(21, 31, 53) 25%
+  );
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 1%;
 }
 
 .wrapper-video {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: top;
+  width: 100%;
+}
+.wrapper-chat{
+  width:30%;
+  height: 100%;
+  margin: 0;
 }
 
 .button {
@@ -26,7 +77,8 @@
   background: #ff4820;
   border: 2px solid #7e2612;
   padding: 0 1rem;
-  color: #fff;
+  margin-bottom: 2rem;
+  /* color: #fff; */
   border-radius: 50%;
 }
 
@@ -38,21 +90,63 @@
 .buttons-bar {
   display: flex;
   flex-direction: row;
-  margin: 1rem;
+  justify-content: center;
+  margin: 2rem;
 }
 
 .chat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  margin-top: 20%;
-  height: 90vh;
-  width: 45vh;
-  border: solid #fff;
+  justify-content: flex-end;
+  /* padding: 1rem; */
+  /* margin-top: 20%; */
+  height: 100%;
+  width: 90%;
+  margin-left: 10%;
+  /* border: solid #fff; */
   border-radius: 12px;
-  background-color: #031b34;
-  margin-left: 2rem;
+  /* background-color: #ff0000; */
+  /* margin-left: 2rem; */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgb(33, 44, 61) 25%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 25%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgb(21, 31, 53) 25%
+  );
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .wrapper-video {
@@ -62,22 +156,57 @@
 }
 
 .tutor {
-  margin-top: 10%;
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  margin-left: 1rem;
+
   height: 70vh;
-  width: 140vh;
+  min-width: 70%;
+  
   border: solid #fff;
   border-radius: 12px;
-  background-color: blue;
+  background-color: rgb(2, 2, 2);
 }
 
 .student {
-  height: 25vh;
-  width: 40vh;
+  height: 25%;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: solid #fff;
-  border-radius: 12px;
+  border-radius: inherit;
   background-color: blue;
+  margin-top: 10rem;
+  /* margin: 1em; */
 }
-
+.funny{
+  width:90%;
+  position: absolute;
+  top: 2rem;
+  border-radius: 12px;
+  height: 15rem;
+}
+.section-2-1_inp444 {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  text-align: center;
+  background-color: #031b34;
+  color: #000000;
+  font-size: xx-large;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
 .text {
   margin-left: 0;
   display: flex;
@@ -98,4 +227,13 @@
   border: none;
   border-radius: 14px;
 
+}
+
+.messages{
+  position: absolute;
+  /* background-color: #ffffff; */
+  height:25rem;
+  width: 100%;
+  z-index: -1;
+  top: 20rem;
 }

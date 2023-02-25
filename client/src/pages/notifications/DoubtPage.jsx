@@ -1,26 +1,22 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import DoubtCard from "../../components/doubtpage/DoubtCard";
 import Navbarvc from "../../components/navbar-other/Navbarvc";
 import { getDoubts } from "../../requests/defaultcall";
 import "./doubtpage.css";
 const DoubtPage = () => {
+  const [doubts, setDoubts] = useState([]);
 
-
-   const [doubts,setDoubts]=useState([]);
-
-   useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
       // You can await here
-     const info=await getDoubts();
-     console.log("we are in doubt page");
-     console.log(info.data);
-     setDoubts(info.data);
+      const info = await getDoubts();
+      console.log("we are in doubt page");
+      console.log(info.data);
+      setDoubts(info.data);
       // ...
     }
     fetchData();
   }, []);
-
-
 
   return (
     <div>
@@ -30,9 +26,8 @@ const DoubtPage = () => {
       />
       <Navbarvc />
       <div className="free-space"></div>
-      <div className="wrapper">
+      <div className="wrapper2">
         <div className="title-section">
-       
           <h1> Doubts</h1>
         </div>
 
@@ -44,10 +39,15 @@ const DoubtPage = () => {
       <div className="line2"></div>
       <div className="session">
         <div className="card-wrapper">
-        {
-          doubts.map((item)=><DoubtCard title={item.title} desc={item.desc} image={item.image} username={item.creator} />)
-        }
-        {/* <DoubtCard/> */}
+          {doubts.map((item) => (
+            <DoubtCard
+              title={item.title}
+              desc={item.desc}
+              image={item.image}
+              username={item.creator}
+            />
+          ))}
+          {/* <DoubtCard/> */}
         </div>
       </div>
       <div className="free-space2"></div>

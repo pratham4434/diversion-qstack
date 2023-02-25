@@ -30,7 +30,8 @@ const Header = () => (
           </Link>
 
           <button className="gpt3__header-content__input-play" type="button">
-            <a style={{display:"flex",justifyContent:"center",  filter: "brightness(90%)"}} href="#wgpt3">
+          {/* drive link */}
+            <a style={{display:"flex",justifyContent:"center",  filter: "brightness(90%)"}} href="#">
             📃
             </a>
           </button>
@@ -41,7 +42,7 @@ const Header = () => (
 
         <div className="gpt3__header-content__people">
           <img src={people} alt="" />
-          <p>100+ available teachers available 24/7</p>
+          <p>100+ tutors available 24/7 to help</p>
         </div>
       </div>
 

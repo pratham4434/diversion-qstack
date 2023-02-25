@@ -1,30 +1,51 @@
-.card{
-    height: 10rem;
-    width: 45rem;
-    background-color: #fdfdfd;
-    margin: 1rem;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: row;
-    border: 3px #042c54;
-}
-.card_img{
-    height: 9rem;
-    width: 10rem;
-    background-color: #042c54;
-    margin: 0.5rem;
-    border-radius: 16px;
+.card {
+  height: 11rem;
+  width: 45rem;
 
+  margin: 1rem;
+  /* border-radius: 24px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #a0a0a0;
+  background: rgba(0, 144, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  /* From https://css.glass */
+  background: rgba(0, 144, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  /* margin: 1rem; */
 }
-.card_time{
-    color: rgb(117, 117, 117);
-    padding:  0.2rem 0;
+
+.card:hover {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 20px #9ecaed;
 }
-.card_desc{
-    height: 9rem;
-    width: 33rem;
-    margin-top: 0.5rem;
-    /* background-color: black; */
-    color: black;
-    font-weight: 600;
+
+.card_img {
+  padding: 1%;
+  height: 9rem;
+  width: 10rem;
+  background-color: #042c54;
+  margin: 0.5rem;
+  border-radius: 16px;
+}
+.card_time {
+  color: rgb(117, 117, 117);
+  padding: 0.2rem 0;
+}
+.card_desc {
+  height: 9rem;
+  width: 33rem;
+  margin-top: 0.5rem;
+  /* background-color: black; */
+  color: black;
+  font-weight: 600;
 }

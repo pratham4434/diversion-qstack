@@ -1,0 +1,55 @@
+.flex-message{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+.main-div-student {
+  background-color: #031b34;
+  color: #fff;
+  font-size: large;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 60%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: left;
+  /* float: right; */
+  margin: 8px;
+  display: inline-block;
+
+  word-wrap: break-word;
+  /* text-align: right; */
+  margin-left: 38%;
+}
+.main-div-student p {
+  word-wrap: break-word;
+}
+.main-div-tutor {
+  background-color: #031b34;
+  color: #fff;
+  font-size: large;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 60%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: left;
+  /* float: left; */
+  margin: 8px;
+  display: inline-block;
+
+  word-wrap: break-word;
+}
+
