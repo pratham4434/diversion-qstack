@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useContext } from "react";
+import React, { useEffect, useState, useRef, useContext, useCallback } from "react";
 import Navbarvc from "../../components/navbar-other/Navbarvc";
 import "./videochat.css";
 import io from "socket.io-client";
@@ -9,6 +9,10 @@ import { FaPhoneSlash, FaVideo } from "react-icons/fa";
 import Message from "../../components/message/Message";
 import { AuthContext } from "../../context/AuthContext";
 import { useLocation } from "react-router-dom";
+import {ZegoUIKITPrebuilt} from "@zegocloud/zego-uikit-prebuilt";
+// import Timer from "../../components/timer/Timer";
+
+
 
 const socket = io.connect("http://localhost:5000");
 const Videochat = () => {
@@ -18,7 +22,7 @@ const Videochat = () => {
   console.log("we are in videochat my friend");
   console.log(user);
   console.log(info);
-
+  const [timers,setTimers]=useState(true);
   const [msg, setMsg] = useState([]);
   const [currmsg, setCurrmsg] = useState("");
   const [room, setRoom] = useState("");
@@ -61,6 +65,30 @@ const Videochat = () => {
     console.log("this is our msg till now");
     console.log(msg);
   });
+
+  
+
+  // const navigate=useNavigate();
+  // const handleJoinRoom=useCallback(
+  //   () => {
+      
+  //   },
+  //   [],
+  // )
+
+  const myMeeting=async(element)=>{
+    const appID=408473423;
+    const serverSecret="33b0ba5b8f16d32bf89d07236aeaa4c9";
+    const kitToken=ZegoUIKITPrebuilt.generateKitTokenForTest(appID,serverSecret,room,user._id,user.username);
+    const zc=ZegoUIKITPrebuilt.create(kitToken);
+    zc.joinRoom({
+      container:element,
+      scenerio:{
+        mode:ZegoUIKITPrebuilt.OneONoneCall,
+      }
+    })
+  }
+  
 
   /*
   useEffect(() => {
@@ -139,6 +167,9 @@ const Videochat = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       />
       <Navbarvc />
+      {/* {
+        (timers)? <Timer timers={timers} setTimers={setTimers} /> :null
+      } */}
       <div className="free-space" style={{ height: "80px" }}></div>
       <div className="wrapper">
         <div className="wrapper-video">
@@ -180,6 +211,7 @@ const Videochat = () => {
                   }}
                 />
               )} */}
+              {/* <div ref={myMeeting}/> */}
               
             </div>
             <h1 className="messages-h1" >Message Box:</h1>
@@ -194,7 +226,7 @@ const Videochat = () => {
               <input
                 value={currmsg}
                 className="naya-input"
-                placeholder="Start typing"
+                placeholder="Start typing..."
                 onChange={(e) => setCurrmsg(e.target.value)}
               />
               <button className="button2" onClick={sendmsg}>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./timer.css";
 import bro from "../../assets/bro.png";
 
-const Timer = () => {
+const Timer = ({timers,setTimers}) => {
   const [seconds, setSeconds] = useState(30);
   const [minutes, setMinutes] = useState(1);
   const [timeUp, setTimeUp] = useState(false);
@@ -16,6 +16,7 @@ const Timer = () => {
 
       if (seconds === 0 && minutes === 0) {
         setTimeUp(true);
+        setTimers(false);
         return;
       } else if (seconds === 0) {
         setMinutes(minutes - 1);
