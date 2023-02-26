@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import Navbarvc from "../../components/navbar-other/Navbarvc";
 import "./videochat.css";
 import io from "socket.io-client";
@@ -7,24 +7,66 @@ import { BiMicrophone } from "react-icons/bi";
 import { GoScreenFull } from "react-icons/go";
 import { FaPhoneSlash, FaVideo } from "react-icons/fa";
 import Message from "../../components/message/Message";
+import { AuthContext } from "../../context/AuthContext";
+import { useLocation } from "react-router-dom";
+
+
 
 const socket = io.connect("http://localhost:5000");
 const Videochat = () => {
-  const [stream, setStream] = useState("");
-  const [msg, setMsg] = useState("");
-  const [myid, setMyid] = useState("");
-  const [caller, setCaller] = useState("");
-  const [name, setName] = useState("");
-  const [idtocall, setIdtocall] = useState("");
-  const [callaccepted, setCallaccepted] = useState(false);
-  const [callended, setCallended] = useState(false);
-  const [callersignal, setCallersignal] = useState("");
-  const [receivingcall, setReceivingcall] = useState(false);
-  const [id, setId] = useState("");
-  const myvideo = useRef();
-  const uservideo = useRef();
-  const connectionref = useRef();
 
+  const {user}=useContext(AuthContext);
+  const info=useLocation();
+  
+  console.log("we are in videochat my friend")
+  console.log(user);
+  console.log(info);
+
+   const[msg,setMsg]=useState([]);
+   const[currmsg,setCurrmsg]=useState("");
+   const [room,setRoom]=useState("");
+   useEffect(()=>{
+    if(user.role==="student"){
+      console.log("i am student and joined the room")
+      socket.emit("join-room",user.username);
+      setRoom(user.username);
+     }else{
+      console.log("i am teacher and joined the room")
+      socket.emit("join-room",info.state.username);
+      setRoom(info.state.username);
+     }
+     socket.emit("join-room",room)
+  
+   },[])
+  
+  //  socket.on("incomingmsg",(data)=>{
+  //   setMsg([...msg,data.msg]);
+  //  })
+   socket.emit("sendmsg",{
+    from:user.username,
+    msg:currmsg,
+    room:room
+   });
+
+   const sendmsg=()=>{
+    console.log("sending msg");
+      setMsg([...msg,{msg:currmsg,room:room,from:user.username}]);
+      
+      socket.emit("send_message",{
+           room:room,
+           from:user.username,
+           msg:currmsg
+      })
+      setCurrmsg("");
+   }
+   socket.on("receive_message",(data)=>{
+    console.log("message recieved")
+    setMsg([...msg,data]);
+    console.log("this is our msg till now");
+    console.log(msg);
+   })
+ 
+/*
   useEffect(() => {
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: true })
@@ -93,7 +135,7 @@ const Videochat = () => {
     peer.signal(callersignal);
     connectionref.current = peer;
   };
-
+*/
   return (
     <>
       <link
@@ -128,7 +170,7 @@ const Videochat = () => {
           <div className="chat">
             {/* <div className="student"></div> */}
             <div className="funny">
-              {stream && (
+              {/* {stream && (
                 <video
                   playsInline
                   muted
@@ -141,17 +183,18 @@ const Videochat = () => {
                     borderRadius: "inherit",
                   }}
                 />
-              )}
+              )} */}
             </div>
             <div className="messages">
-              <Message />
+              {msg.map((item)=><Message data={item} my={user.username} />)}
             </div>
             <input
-              value={msg}
+              value={currmsg}
               className="section-2-1_inp444 title-ques"
               placeholder="Start typing"
-              onChange={(e) => setMsg(e.target.value)}
+              onChange={(e) => setCurrmsg(e.target.value)}
             />
+            <button onClick={sendmsg}>Send</button>
           </div>
         </div>
       </div>

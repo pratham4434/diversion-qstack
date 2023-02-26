@@ -41,7 +41,7 @@ const DoubtCard = ({title,desc,image,username}) => {
             </button>
           </Link>
           &nbsp;&nbsp; &nbsp;&nbsp;
-          <Link to="/videochat">
+          <Link to={{pathname:"/videochat",state:{username}}}>
             <button
               className="btn timer-butt"
               style={{

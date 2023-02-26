@@ -1,14 +1,17 @@
 import React from "react";
 import "./message.css";
 
-const Message = () => {
+const Message = ({ data, my }) => {
   return (
     <>
-    <div className="flex-message">
-      <div className="main-div-student">Message Student</div>
-      <div className="main-div-tutor">
-        <p>Messagdddddddddddddddddddddddddddde Tutor</p>
-      </div>
+      <div className="flex-message">
+        {data.from === my ? (
+          <div className="main-div-tutor">
+            <p>{data.msg}</p>
+          </div>
+        ) : (
+          <div className="main-div-student">{data.msg}</div>
+        )}
       </div>
     </>
   );

@@ -9,19 +9,20 @@ const io=require("socket.io")(server,{
     }
 })
 io.on("connection",(socket)=>{
-    socket.emit("connected");
-
-    socket.on("calluser",(data)=>{
-        io.to(data.usertocall).emit("calluser",{
-            signal:data.signaldata,
-            from:data.from,
-            name:data.name
-        })
+    
+    socket.on("join-room",(name)=>{
+        console.log("someone joined the room")
+        socket.join(name);
     })
 
-    socket.on("answercall", (data) => {
-		io.to(data.to).emit("callaccepted", data.signal)
-	})
+    socket.on("sendmsg",(data)=>{
+        io.to(data.to).emit("incomingmsg",data);
+    })
+
+    socket.on("send_message", (data) => {
+        console.log("msg is recieved by the server");
+        socket.to(data.room).emit("receive_message", data);
+      });
 
 
     socket.on("disconnect",()=>{
