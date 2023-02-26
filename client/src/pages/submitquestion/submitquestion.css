@@ -246,6 +246,26 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+.title-ques2{
+  width: 40%;
+  height: 7%;
+  border-radius: 24px;
+  /* position: absolute; */
+  
+  text-align: left;
+  padding: 1rem;
+  width: 75%;
+  margin-top: 8rem;
+  background-color: #031b34;
+  color: #fff;
+  font-size: large;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
 .flex-col{
   display: flex;
   flex-direction: column;

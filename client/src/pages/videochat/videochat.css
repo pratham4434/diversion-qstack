@@ -61,8 +61,8 @@
   align-items: top;
   width: 100%;
 }
-.wrapper-chat{
-  width:30%;
+.wrapper-chat {
+  width: 30%;
   height: 100%;
   margin: 0;
 }
@@ -82,7 +82,22 @@
   border-radius: 50%;
 }
 
-.icons{
+.button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  /* position: absolute; */
+  cursor: pointer;
+  background: #ff4820;
+  border: 2px solid #7e2612;
+  padding: 0 1rem;
+  /* margin-bottom: 2rem; */
+  /* color: #fff; */
+  border-radius: 50%;
+}
+.icons {
   height: 20px;
   width: 20px;
 }
@@ -165,7 +180,7 @@
 
   height: 70vh;
   min-width: 70%;
-  
+
   border: solid #fff;
   border-radius: 12px;
   background-color: rgb(2, 2, 2);
@@ -182,14 +197,19 @@
   border-radius: inherit;
   background-color: blue;
   margin-top: 10rem;
+  
   /* margin: 1em; */
 }
-.funny{
-  width:90%;
+.funny {
+  width: 90%;
   position: absolute;
   top: 2rem;
+  border: 0.5px solid #fff;
+
   border-radius: 12px;
   height: 15rem;
+  background-color: #000;
+
 }
 .section-2-1_inp444 {
   z-index: 9999;
@@ -207,6 +227,20 @@
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
+
+.naya-input{
+  margin:0.5rem;
+  background-color: #031b34;
+  color: #000000;
+  padding: 0 1rem;;
+  font-size: large;
+  background: rgba(0, 0, 0, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
 .text {
   margin-left: 0;
   display: flex;
@@ -214,7 +248,7 @@
   height: 50px;
   width: 100%;
   border-radius: 14px;
-  
+
   background-color: #fff;
 }
 
@@ -226,14 +260,26 @@
   padding: 0;
   border: none;
   border-radius: 14px;
-
 }
 
-.messages{
+.messages {
+  overflow-y: scroll;
+
   position: absolute;
   /* background-color: #ffffff; */
-  height:25rem;
+  height: 25rem;
   width: 100%;
   z-index: -1;
   top: 20rem;
+}
+
+.messages-h1{
+  position: absolute;
+  bottom: 50vh;
+}
+
+@media screen and (max-width: 1860px) {
+  .messages-h1{
+   visibility: hidden;
+  }
 }
